@@ -1,0 +1,266 @@
+@import 'https://fonts.googleapis.com/css?family=Gloria+Hallelujah';
+html, body {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+.body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #121212;
+	color: #fff;
+	padding: 12px;
+}
+.body .k-container-body {
+	position: relative;
+	background-color: #121212;
+	border: 3px solid rgba(148,192,200,0.8);
+	border-radius: 20px;
+	width: 580px;
+	height: 380px;
+	perspective: 1000;
+	padding: 10px;
+}
+.body .k-container-body:before, .body .k-container-body:after {
+	content: '';
+	position: absolute;
+	bottom: 20px;
+	height: 90px;
+	width: 35px;
+	border-radius: 10px;
+	z-index: -1;
+}
+.body .k-container-body:before {
+	border-left: 3px solid rgba(148,192,200,0.8);
+	left: -12px;
+}
+.body .k-container-body:after {
+	border-right: 3px solid rgba(148,192,200,0.8);
+	right: -12px;
+}
+.body .k-screw {
+	position: absolute;
+	display: inline-block;
+	border: 3px solid rgba(148,192,200,0.8);
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+}
+.body .k-screw:before, .body .k-screw:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transform-origin: center;
+	background-color: rgba(148,192,200,0.8);
+	height: 70%;
+	width: 3px;
+}
+.body .k-screw:before {
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+.body .k-screw:after {
+	transform: translate(-50%,-50%) rotate(-45deg);
+}
+.body .k-screw.top-left {
+	top: 10px;
+	left: 10px;
+}
+.body .k-screw.top-right {
+	top: 10px;
+	right: 10px;
+}
+.body .k-screw.bottom-left {
+	bottom: 10px;
+	left: 10px;
+}
+.body .k-screw.bottom-right {
+	bottom: 10px;
+	right: 10px;
+}
+.body .k-centerreel {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: 3px solid rgba(148,192,200,0.8);
+	border-radius: 45px;
+	width: 300px;
+	height: 90px;
+	padding: 10px;
+}
+.body .k-centerreel .reel {
+	position: relative;
+	display: inline-block;
+	border: 3px solid rgba(148,192,200,0.8);
+	width: 65px;
+	height: 100%;
+	border-radius: 50%;
+}
+.body .k-centerreel .reel:before {
+    content: '';
+	display: inline-block;
+	width: 82%;
+	height: 82%;
+	border: 6px dashed rgba(148,192,200,0.8);
+	border-radius: 50%;
+	transform-origin: center;
+	animation: spin 3s linear infinite;
+}
+.body .k-centerreel .reel.left {
+	float: left;
+}
+.body .k-centerreel .reel.right {
+	float: right;
+}
+.body .k-centerreel .center-tape {
+    border: 3px solid rgba(148,192,200,0.8);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 70%;
+	width: 100px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.body .k-centerreel .center-tape:before {
+	content: '';
+	border: 3px solid rgba(148,192,200,0.8);
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -50%;
+	animation: shiftLeft 1.3s ease-in-out alternate infinite;
+}
+.body .k-centerreel .center-tape:after {
+	content: '';
+	border: 3px solid rgba(148,192,200,0.8);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: -95%;
+	animation: shiftRight 1s ease-in-out alternate infinite;
+}
+.body .k-label {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: 3px solid rgba(148,192,200,0.8);
+	top: 25%;
+	max-width: 400px;
+	width: 100%;
+	padding: 0px 20px;
+	overflow: hidden;
+}
+.body .k-label:before {
+	content: '';
+	position: absolute;
+	bottom: 1.85ex;
+	left: 0;
+	right: 0;
+	height: 2.5ex;
+	border-top: 3px dashed rgba(148,192,200,0.4);
+	border-bottom: 3px dashed rgba(148,192,200,0.4);
+	z-index: -1;
+}
+.body .k-label h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+	margin: 0;
+}
+.body .k-label h1.center {
+	text-align: center;
+}
+.body .k-chin {
+	position: absolute;
+	left: 50%;
+	bottom: -10px;
+	transform: translateX(-50%) rotateX(45deg);
+	transform-origin: bottom center;
+	max-width: 400px;
+	width: 100%;
+	height: 150px;
+	border-radius: 15px;
+	background-color: #121212;
+	border: 3px solid rgba(148,192,200,0.8);
+}
+.body .k-chin:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	top: 30%;
+	background-color: rgba(148,192,200,0.8);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.body .k-chin .holes {
+	position: absolute;
+	display: inline-block;
+	border: 3px solid rgba(148,192,200,0.8);
+	border-radius: 50%;
+}
+.body .k-chin .holes:nth-child(1) {
+	width: 30px;
+	height: 30px;
+	bottom: 10px;
+	left: 40px;
+}
+.body .k-chin .holes:nth-child(2) {
+    width: 20px;
+	height: 20px;
+	bottom: 40px;
+	left: 80px;
+}
+.body .k-chin .holes:nth-child(3) {
+    width: 20px;
+	height: 20px;
+	bottom: 40px;
+	right: 80px;
+}
+.body .k-chin .holes:nth-child(4) {
+	width: 30px;
+	height: 30px;
+	bottom: 10px;
+	right: 40px;
+}
+@keyframes spin {
+    0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes shiftLeft {
+	0% {
+		left: -50%;
+	}
+	100% {
+		left: -53%;
+	}
+}
+@keyframes shiftRight {
+	0% {
+	    right: -95%;
+	}
+	100% {
+		right: -93%;
+	}
+}
