@@ -18,4 +18,9 @@
 ![image](https://github.com/cChloeChang/html-practice/blob/master/preview/5-3.png)
 ![image](https://github.com/cChloeChang/html-practice/blob/master/preview/5-4.png)
 <br />
+## practice 6 preview
+![image](https://github.com/cChloeChang/html-practice/blob/master/preview/6-1.png)
+![image](https://github.com/cChloeChang/html-practice/blob/master/preview/6-2.png)
+![image](https://github.com/cChloeChang/html-practice/blob/master/preview/6-3.png)
+![image](https://github.com/cChloeChang/html-practice/blob/master/preview/6-4.png)
 <br />
